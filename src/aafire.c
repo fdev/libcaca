@@ -238,10 +238,10 @@ _paused:
   caca_dither_bitmap(cv, 0, 0, caca_get_canvas_width(cv),
                       caca_get_canvas_height(cv), caca_dither, bitmap);
   caca_set_color_ansi(cv, CACA_WHITE, CACA_BLUE);
-  if (sloop < 100)
-    caca_put_str(cv, caca_get_canvas_width(cv) - 30,
-                  caca_get_canvas_height(cv) - 2,
-                  " -=[ Powered by libcaca ]=- ");
+  // if (sloop < 100)
+  //   caca_put_str(cv, caca_get_canvas_width(cv) - 30,
+  //                 caca_get_canvas_height(cv) - 2,
+  //                 " -=[ Powered by libcaca ]=- ");
 
   caca_refresh_display(dp);
   /*XSIZ = caca_get_width() * 2;

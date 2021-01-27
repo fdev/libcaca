@@ -40,10 +40,10 @@ void (*fn[])(enum action, caca_canvas_t *) =
 {
     plasma,
     metaballs,
-    moire,
+    // moire,
     /*langton,*/
-    matrix,
-    rotozoom,
+    // matrix,
+    // rotozoom,
 };
 #define DEMOS (sizeof(fn)/sizeof(*fn))
 
@@ -173,10 +173,10 @@ _paused:
         }
 
         caca_set_color_ansi(frontcv, CACA_WHITE, CACA_BLUE);
-        if(frame < 100)
-            caca_put_str(frontcv, caca_get_canvas_width(frontcv) - 30,
-                                   caca_get_canvas_height(frontcv) - 2,
-                                   " -=[ Powered by libcaca ]=- ");
+        // if(frame < 100)
+        //     caca_put_str(frontcv, caca_get_canvas_width(frontcv) - 30,
+        //                            caca_get_canvas_height(frontcv) - 2,
+        //                            " -=[ Powered by libcaca ]=- ");
         caca_refresh_display(dp);
     }
 end:
@@ -565,7 +565,7 @@ static void draw_ball(uint8_t *screen, unsigned int bx, unsigned int by)
     }
 }
 
-/* The moiré effect */
+/* The moirï¿½ effect */
 #define DISCSIZ (XSIZ*2)
 #define DISCTHICKNESS (XSIZ*15/40)
 static uint8_t disc[DISCSIZ * DISCSIZ];
@@ -946,4 +946,3 @@ void rotozoom(enum action action, caca_canvas_t *canvas)
         break;
     }
 }
-
